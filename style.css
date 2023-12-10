@@ -8,11 +8,14 @@
     --aside-col: #0284c7;
     --header-col: #f5f5f5;
     --main-col: #a3a3a3;
+    --input-col: #6d28d9;
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    font-size: 1rem;
 }
 
 .container > aside{
@@ -20,7 +23,7 @@
     background-color: var(--aside-col);
     color: #fff;
     grid-column: 1/2;
-    grid-row: 1/span 2; /* Might have to change span later, to get it to stretch with other content */
+    grid-row: 1/span 5; /* Might have to change span later, to get it to stretch with other content */
     padding: 16px 16px 40px 16px;
 }
 
@@ -44,16 +47,91 @@ aside > .home-list{
 }
 
 
-
-
-
-
-
-
-
 .container > header{
     background-color: var(--header-col);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.5fr 1fr;
 }
+
+header > .search-container{
+    grid-column: 1/ span 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-top: 16px;
+}
+
+.search-container > .search-bar{
+    background-color: grey;
+    font-size: 1.5rem;
+    color: yellow;
+    border-radius: 16px;
+    width: 600px;
+    height: 33px;
+    grid-column: 1/ span 2;
+    opacity: 0.25;
+    margin-left: 16px;
+}
+
+header > .bell-container{
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.cat-img{
+    border-radius: 50%;
+    background-color: yellow;
+    padding: 8px;
+}
+
+header > .hello-container{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    padding-left: 40px;
+    padding-top: 16px;
+}
+
+
+.hello-container > .hi-there{
+    display: flex;
+    flex-direction: column;
+}
+
+.hi-there > .hi{
+    margin-bottom: 8px;
+}
+
+.myname{
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.hi-there > .bigger{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container > main{
     background-color: var(--main-col);
