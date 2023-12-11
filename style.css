@@ -7,8 +7,9 @@
 :root{
     --aside-col: #0284c7;
     --header-col: #f5f5f5;
-    --main-col: #a3a3a3;
+    --main-col: #cbd5e1;
     --input-col: #6d28d9;
+    --img-background: #f59e0b;
 }
 
 .container{
@@ -51,8 +52,9 @@ aside > .home-list{
     background-color: var(--header-col);
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: 0.5fr 1fr;
+
 }
 
 header > .search-container{
@@ -67,7 +69,7 @@ header > .search-container{
 .search-container > .search-bar{
     background-color: grey;
     font-size: 1.5rem;
-    color: yellow;
+    color: var(--img-background);;
     border-radius: 16px;
     width: 600px;
     height: 33px;
@@ -78,16 +80,21 @@ header > .search-container{
 
 header > .bell-container{
     display: grid;
-    grid-template-columns: repeat(3,80px);
+    grid-template-columns: repeat(3,100px);
     align-items: center;
     justify-content: center;
     padding-top: 16px;
+    grid-column: 3;
 }
 
 .cat-img{
     border-radius: 50%;
-    background-color: yellow;
+    background-color: var(--img-background);
     padding: 8px;
+}
+
+.hello-container > .cat-img{
+    margin-bottom: 8px;
 }
 
 header > .hello-container{
@@ -119,21 +126,70 @@ header > .hello-container{
     font-size: 1.5rem;
 }
 
+header > .upload-buttons{
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.upload-buttons > button{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 16px;
+    color: #fff;
+    background-color: var(--aside-col);
+}
 
 .container > main{
     background-color: var(--main-col);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     
+}
+
+main > .your-projects,
+main > .announcements{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+main > .announcements{
+    grid-column: 3 / span 1;
+}
+
+main > .left-container{
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column: 1/span 2;
+}
+
+.left-container > .card{
+    background-color: #fff;
+    border-left: 10px solid var(--img-background);;
+    border-radius: 8px;
+    padding: 24px;
+    height: 270px;
+    display: grid;
+}
+
+.card > p{
+    font-size: 1rem;
+}
+
+.card > .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card > ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    align-self: flex-end;
+    margin-top: 40px;
 }
