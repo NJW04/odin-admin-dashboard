@@ -6,8 +6,8 @@
 
 :root{
     --aside-col: #0284c7;
-    --header-col: #f5f5f5;
-    --main-col: #cbd5e1;
+    --header-col:#d3e9e0;
+    --main-col: pink;
     --input-col: #6d28d9;
     --img-background: #f59e0b;
 }
@@ -54,6 +54,8 @@ aside > .home-list{
     align-items: center;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 0.5fr 1fr;
+    border-bottom: 2px solid #333;
+
 
 }
 
@@ -67,7 +69,7 @@ header > .search-container{
 }
 
 .search-container > .search-bar{
-    background-color: grey;
+    background-color: var(--main-col);
     font-size: 1.5rem;
     color: var(--img-background);;
     border-radius: 16px;
